@@ -671,37 +671,6 @@ footer p{font-size:12px;color:var(--muted);}
   </div>
   <div style="max-width:760px;margin:0 auto;padding:48px 24px;">
 
-    <!-- Account lookup tool -->
-    <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 32px;margin-bottom:32px;">
-      <div style="font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;color:var(--blue-lt);letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;">Account Checker</div>
-      <p style="font-size:14px;color:var(--muted);margin-bottom:20px;">Verify that an account is on your approved list before submitting.</p>
-      <div style="display:flex;flex-direction:column;gap:14px;">
-        <div>
-          <label style="font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.4px;text-transform:uppercase;display:block;margin-bottom:6px;">Your Partner Name</label>
-          <select id="lu-partner" style="width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:14px;padding:10px 14px;outline:none;font-family:'Source Sans 3',sans-serif;">
-            <option value="">— Select your partner —</option>
-            <option>Abacus</option>
-            <option>Altivate</option>
-            <option>Arete</option>
-            <option>DBS</option>
-            <option>EDM-Establishment ABDULSAMI ABDALLAH CHARIF</option>
-            <option>Edraky</option>
-            <option>Ejada</option>
-            <option>Global Experts</option>
-            <option>INTELLIGROUP SAUDI ARABIA COMPANY LTD.</option>
-            <option>Seidor</option>
-            <option>Spirit</option>
-            <option>Technoval</option>
-          </select>
-        </div>
-        <div>
-          <label style="font-size:12px;font-weight:600;color:var(--muted);letter-spacing:.4px;text-transform:uppercase;display:block;margin-bottom:6px;">Account / Company Name</label>
-          <input id="lu-account" type="text" placeholder="Type account name…" style="width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:14px;padding:10px 14px;outline:none;font-family:'Source Sans 3',sans-serif;">
-        </div>
-        <button onclick="runLookup('lu-partner','lu-account','lu-result')" style="align-self:flex-start;background:var(--blue);color:#fff;border:none;border-radius:10px;padding:10px 24px;font-size:14px;font-weight:600;cursor:pointer;font-family:'Lexend',sans-serif;">Check</button>
-        <div id="lu-result" style="display:none;padding:14px 18px;border-radius:10px;font-size:15px;font-weight:600;font-family:'Lexend',sans-serif;"></div>
-      </div>
-    </div>
 
     <div style="background:#FFFFFF;border:1px solid var(--border);border-radius:16px;overflow:hidden;min-height:600px;">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeODfUL7bD9IcirupzK0wzUiiLPNiZhVYyxfFDnWRMZOdZrTQ/viewform?embedded=true"
@@ -724,20 +693,7 @@ footer p{font-size:12px;color:var(--muted);}
     <p>Verify any account against the full approved list. SAP internal use only.</p>
   </div>
   <div style="max-width:600px;margin:0 auto;padding:48px 24px;">
-    <div id="checker-gate" style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:36px 32px;text-align:center;">
-      <div style="font-size:32px;margin-bottom:16px;">🔒</div>
-      <h2 style="font-family:'Lexend',sans-serif;font-size:20px;font-weight:700;color:var(--fg);margin-bottom:8px;">SAP Internal Access</h2>
-      <p style="font-size:14px;color:var(--muted);margin-bottom:24px;">Enter the event password to access the account checker.</p>
-      <div style="display:flex;gap:10px;max-width:340px;margin:0 auto;">
-        <input id="checker-pass" type="password" placeholder="Password"
-          style="flex:1;padding:10px 14px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--fg);font-size:14px;outline:none;"
-          onkeydown="if(event.key==='Enter')unlockChecker()">
-        <button onclick="unlockChecker()"
-          style="padding:10px 20px;background:var(--blue);color:#fff;border:none;border-radius:8px;font-family:'Lexend',sans-serif;font-size:14px;font-weight:600;cursor:pointer;">Enter</button>
-      </div>
-      <div id="checker-pass-err" style="display:none;color:var(--red);font-size:13px;margin-top:10px;">Incorrect password.</div>
-    </div>
-    <div id="checker-tool" style="display:none;">
+    <div id="checker-tool">
       <div style="background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 32px;margin-bottom:16px;">
         <div style="font-family:'Lexend',sans-serif;font-size:13px;font-weight:600;color:var(--blue-lt);text-transform:uppercase;letter-spacing:.07em;margin-bottom:8px;">Search Any Account</div>
         <div style="display:flex;flex-direction:column;gap:14px;">
