@@ -838,6 +838,10 @@ function runLookup(partnerSelectId, accountInputId, resultDivId) {
     resultEl.style.background = 'rgba(16,185,129,0.12)';
     resultEl.style.color = 'var(--green)';
     resultEl.textContent = '\u2713 On the approved list' + (foundIn && !partner ? ' (' + foundIn + ')' : '');
+  } else if (fuzzyFound) {
+    resultEl.style.background = 'rgba(253,126,20,0.12)';
+    resultEl.style.color = '#fd7e14';
+    resultEl.textContent = '\u26a0 Possible match: "' + fuzzyMatch + '"' + (fuzzyPartner && !partner ? ' (' + fuzzyPartner + ')' : '') + ' \u2014 SAP will review';
   } else {
     resultEl.style.background = 'rgba(239,68,68,0.12)';
     resultEl.style.color = 'var(--red)';
